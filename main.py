@@ -51,3 +51,53 @@ n2 = Complex(-2, 6)
 result = n1.add(n2)
 print("real = ", result.real)
 print("imag = ", result.imag)
+
+class Triangle:
+    def __init__(self, a, b, c):
+        self.a = a
+        self.b = b
+        self.c = c
+
+    def perimeter(self):
+        total_perimeter = self.a + self.b + self.c
+        return total_perimeter
+
+triangle1 = Triangle(3, 4, 5)
+total_perimeter = triangle1.perimeter()
+print("The perimeter of the triangle is, ", total_perimeter)
+
+class Person:
+    def __init__(self, name, age, gender):
+        self.name = name
+        self.age = age
+        self.gender = gender
+    
+    def check_details(self):
+        if self.age > 18:
+            return True
+        else:
+            return False
+person1 = Person("Harry", 25, "male")
+person2 = Person("Taylor", 12, "female")
+okayed = person1.check_details()
+print(f'{person1.name} is {person1.age} and {person1.gender}: {okayed}')
+okayed = person2.check_details()
+print(f'{person2.name} is {person2.age} and {person2.gender}: {okayed}')
+
+class Car:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.engine_running = True
+
+    def start_engine(self):
+        if not self.engine_running:
+            return print("starting engine.....")
+            self.engine_running = True
+        else:
+            return print("Engine is already running")
+
+my_car = Car("Toyota", "Camry", 1980)
+is_running = my_car.start_engine()
+print(f'{my_car.make}, {my_car.model}, {my_car.year}')
