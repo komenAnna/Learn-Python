@@ -1,7 +1,7 @@
 #Define a class before we can create objects
 class Student:
     #a method inside the class that can be accessed by the objects
-    #whenever we define methods for a class, we need to use self as the firs argument, which represents the object calling the method
+    #whenever we define methods for a class, we need to use self as the first argument, which represents the object calling the method
     def check_pass_fail(self):
         if self.marks>=40:
             return True
@@ -101,3 +101,34 @@ class Car:
 my_car = Car("Toyota", "Camry", 1980)
 is_running = my_car.start_engine()
 print(f'{my_car.make}, {my_car.model}, {my_car.year}')
+
+class Vehicle:
+    def __init__(self, make, model, color):
+        self.make = make
+        self.model = model
+        self.color = color
+my_vehicle = Vehicle("Honda", "Accord", "Blue")
+print(my_vehicle.make, my_vehicle.model, my_vehicle.color)
+
+class Employees:
+    
+    def __init__(self, name, age, current_position, salary):
+        self.name = name
+        self.age = age
+        self.current_position = current_position
+        self.salary = salary
+
+    def paid (self):
+        if self.salary > 30000:
+            status = "The employee has not been paid"
+            return status
+        else:
+            status = "The employee has been paid"
+            return status
+employee1 = Employees("Ana", 26, "CSR", 40000)
+employee1_status = employee1.paid()
+print(employee1.name)
+print(employee1.age)
+print(employee1.current_position)
+print(employee1.salary)
+print(employee1_status)
