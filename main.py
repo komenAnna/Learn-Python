@@ -132,3 +132,15 @@ print(employee1.age)
 print(employee1.current_position)
 print(employee1.salary)
 print(employee1_status)
+
+
+class Room:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def calculate_area(self):
+        area = self.length * self.width
+        return area
+studyRoom = Room(42.5, 38.7)
+print(f'The total area of the study room is {studyRoom.calculate_area()}')
