@@ -72,3 +72,18 @@ sum_of_elements([3, 4, 5])
 #Use a list comprehension to create a list of even numbers from 1 to 20
 even_numbers = list(range(0, 20, 2))
 print(even_numbers)
+
+#Use the random module to generate a random number between 1 and 10
+import random
+random_number = random.randint(1,10)
+print("The random number is: ", random_number)
+
+#Use a try-except block to handle an exception
+temp = 0
+try:
+    normal_temp = 27 / temp
+    print("The normal temperature should be: ", normal_temp)
+except ZeroDivisionError:
+    print("Zero Division Error")
+
+#Use the time module to measure the execution time of a function
