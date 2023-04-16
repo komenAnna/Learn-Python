@@ -87,3 +87,66 @@ except ZeroDivisionError:
     print("Zero Division Error")
 
 #Use the time module to measure the execution time of a function
+#The Python time module provides various time-related functions, 
+#such as getting the current time and suspending the calling thread’s execution for the given number of seconds. 
+import time
+
+#Store the start time
+#get the start time before executing the first line of the program
+start_time = time.time()
+
+#write the main program
+sum_of_nums = 0
+for i in range(1000):
+    sum_of_nums += 1
+# wait for 3 seconds
+time.sleep(3)
+print('Sum of first 1000 numbers is:', sum_of_nums)
+
+#store the end time of execution
+end_time = time.time()
+
+#execution time
+execution_time = end_time - start_time
+print("The execution time of the program is ", execution_time, "seconds")
+
+#Use the string methods to manipulate a string (e.g., upper(), lower(), replace())
+my_name = "Marianna Komen"
+print(my_name.upper())
+print(my_name.lower())
+print(my_name.replace('Marianna', 'Ashly'))
+
+#Use the datetime module to get the current date and time
+#import the datetime class from using datetime import datetime module
+from datetime import datetime
+
+#use the now() of the datetime class
+#The datetime.now() returns the current local date and time. 
+# By default, it represents datetime in YYYY-mm-dd hh:mm:ss.microseconds format.
+now = datetime.now()
+print("Current day and time is ",now)
+
+#to print only current day
+current_date = now.date()
+print("Today is ",current_date)
+
+#to print only current time 
+current_time = now.time()
+print("Today is ",current_time)
+
+#Create a class and instantiate an object
+class Tenants:
+    #attributes of the object
+    def __init__(self, name, house_no):
+        self.name = name
+        self.house_no = house_no
+        self.rent_paid = True
+    #methods of the object
+    def is_rent_paid(self):
+        if not self.rent_paid:
+            print("The tenant has not paid the rent. Send reminder message")
+        else:
+            print("The tenant has already paid the rent")
+tenant1 = Tenants("Anna", "B16")
+tenant1.is_rent_paid()
+print(f'{tenant1.name} of {tenant1.house_no} rent status is: {tenant1.is_rent_paid()}')
