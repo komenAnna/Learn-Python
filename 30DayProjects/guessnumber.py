@@ -11,11 +11,11 @@
 import random
 
 def guess_number():
-    secret_number = random.randint(1, 10) #generate a number between 1 and 100
+    secret_number = random.randint(1, 10) #generate a number between 1 and 10
     num_guesses = 0 #initialize number of guesses to 0
 
     while True:
-        guess = int(input('Guess a number between 1 and 10: ', ))
+        guess = int(input('Guess a number between 1 and 10: '))
         num_guesses += 1 #increment the number of guesses by 1
 
         if guess == secret_number:
